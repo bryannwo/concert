@@ -14,4 +14,6 @@ Rails.application.routes.draw do
   get "buscardisponibles", to: "seat#buscardisponibles"
   
   resources :reservations
+  resources :seat
+  resources :seats
 end

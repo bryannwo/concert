@@ -24,7 +24,7 @@ class SeatController < ApplicationController
             )
 
         @seat.save
-        redirect_to @seat 
+       
     end
 
 
