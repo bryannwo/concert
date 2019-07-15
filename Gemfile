@@ -59,4 +59,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'bootstrap'
 gem 'jquery-rails'
-gem 'ransack', github: 'activerecord-hackery/ransack'
+gem 'pg'
+gem 'rails_12factor'
