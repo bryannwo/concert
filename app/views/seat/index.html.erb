@@ -1,0 +1,30 @@
+<h1 style="color: #ffffff;">ASIENTOS</h1>
+
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" 
+  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown button
+  </button>
+    <div class="dropdown-menu" aria-label="OPCIONES">
+      <a class="dropdown-item" href="/seat/new">CREAR NUEVO ASIENTO</a>
+      <a class="dropdown-item" href="/welcome/index">REGRESAR</a>
+      
+    </div>
+</div>
+<br>
+
+  <% @seats.each do |seat| %>
+	<p >
+		<b  style="color: #ffffff;">Numeracion: <%= seat.numeracion %> </b><br>
+        <b  style="color: #ffffff;">Localidad: <%= seat.localidad %></b><br>
+        <b  style="color: #ffffff;">Precio: $<%= seat.precio %></b>
+			
+		
+		<h4 style="color: #ffffff;">----------------------------------------</h4>
+	</p>
+
+    <%end%>
+
+   
+
+<br><br>

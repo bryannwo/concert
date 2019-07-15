@@ -1,0 +1,19 @@
+<%= @localidad.inspect %>
+
+
+<h1 style="color: #ffffff; ">Estos son los ASIENTOS que tenemos disponibles para la localidad:</h1>
+<% @busqueda.each do |seat| %>
+	<p>
+		<h4 style="color: #ffffff; ">Asiento <%= seat.id %></h4>
+		<h5 style="color: #ffffff; ">Numeracion: <%= seat.numeracion %></h5>
+		<h5 style="color: #ffffff; ">Localidad: <%= seat.localidad %><br></h5> 
+        <h5 style="color: #ffffff; ">Precio: <%= seat.precio %><br></h5> 
+	
+		
+		<%= button_to "RESERVA YA !", new_reservation_path, :method => :get, params: { asiento: seat.id} %>	
+		----------------------------------------
+	</p>
+
+<%end%>
+
+<a href="/">REGRESAR AL INICIO</a>

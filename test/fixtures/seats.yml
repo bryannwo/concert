@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  numeracion: MyString
+  localidad: MyString
+  precio: 
+
+two:
+  numeracion: MyString
+  localidad: MyString
+  precio: 

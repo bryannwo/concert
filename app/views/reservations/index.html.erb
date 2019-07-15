@@ -1,0 +1,22 @@
+<h1 style="color: #ffffff;">RESERVACIONES </h1>
+
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" 
+  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown button
+  </button>
+        <div class="dropdown-menu" aria-label="OPCIONES">
+            <a class="dropdown-item" href="/welcome/index">REGRESAR</a>
+            
+        </div>
+</div>
+<br><br>
+<% @reservations.each do |reservation| %>
+	<p >
+		<b  style="color: #ffffff;">Usuario: <%= reservation.user_id %> </b><br>
+        <b  style="color: #ffffff;">Asiento: <%= reservation.seat_id %></b><br>
+        
+		<h4 style="color: #ffffff;">----------------------------------------</h4>
+	</p>
+
+    <%end%>

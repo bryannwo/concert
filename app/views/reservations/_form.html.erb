@@ -1,0 +1,25 @@
+<h1 style="color: #ffffff; "><%= name %> RESERVA</h1>
+<%= @asiento.inspect %>
+
+<%= form_for(@reservation) do |x| %>
+	<table>
+	
+	<div class ="field">
+		<tr>
+			<td><h5 style="color: #ffffff; ">ASIENTO: </h5></td>
+			<td><%= x.text_field :seat_id, :value => @asiento , :readonly => true%></td></tr>
+		<tr>
+            <tr>
+            <td><h5 style="color: #ffffff; ">USUARIO: </h5></td>
+            <td><%= x.text_field :user_id, :value => current_user.id , :readonly => true %></td></tr>
+            <tr>
+	</div>
+</table>
+<br>
+<div>
+	<%= x.submit "GUARDAR" %>
+</div>
+
+<br>
+<a href="/welcome/index">REGRESAR</a>
+<%end%>

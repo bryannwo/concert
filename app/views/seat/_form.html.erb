@@ -1,0 +1,24 @@
+<h1 style="color: #ffffff; " ><%= name %> ASIENTO</h1>
+<%= form_for(@seat) do |x| %>
+	<table>
+	
+	<div class ="field">
+		<tr>
+			<td><h4 style="color: #ffffff; ">NUMERACION: </h4></td>
+			<td><%= x.text_field :numeracion %></td></tr>
+		<tr>
+			<td><h4 style="color: #ffffff; ">LOCALIDAD: </h4></td>
+			<td><%= x.text_field :localidad %></td></tr>
+		<tr>
+            <td><h4 style="color: #ffffff; ">PRECIO: </h4></td>
+            <td><%= x.text_field :precio %></td></tr>
+	</div>
+</table>
+<br>
+<div>
+	<%= x.submit "GUARDAR" %>
+</div>
+
+<br>
+<a href="/welcome/index">REGRESAR</a>
+<%end%>

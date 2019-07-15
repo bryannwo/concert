@@ -1,0 +1,107 @@
+<html>
+<head>
+<h1 style="color: #ffffff;" align="center">CONCIERTO DE ROCK</h1>
+</head>
+
+
+
+
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="background-color:black">
+      <div class="carousel-inner">
+          <div class="carousel-item active">
+              <div class="container">
+                <img src="/s1.jpg" class="d-block w-100" alt="1" style="width:100px;height:300px;">
+               </div>
+          </div>
+      
+          <div class="carousel-item">
+              <div class="container">
+                    <img src="/s3.jpg" class="d-block w-100" alt="2" style="width:100px;height:300px;">
+              </div>
+          </div>
+          <div class="carousel-item">
+              <div class="container">
+                  <img src="/s2.jpg" class="d-block w-100" alt="3" style="width:100px;height:300px;">
+              </div>
+          </div>
+      </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+
+
+<body>
+<h3 style="color: #ffffff;" align="center">NO TE LO PIERDAS, por primera vez en ECUADOR!!!!</h3>
+<div>
+<img src="/s4.jpg" alt="Logotipo de HTML5" class="center" width="500" height="350" >
+</div>
+<br>
+<h3 style="color: #ffffff;" align="center">LOCALIDADES DISPONIBLES:</h3>
+<h5 style="color: #ffffff;" align="center">General $25.00 &nbsp - &nbsp Preferencia $50.00 &nbsp - &nbsp Butaca $75.00 &nbsp - &nbsp Dead-BOX $100.00</h5>
+<br>
+<h3 style="color: #ffffff; align="right">Seleciona tu localidad favorita:</h3>
+<br>
+
+
+
+<li class="nav-item">
+      <% if user_signed_in?%>
+      <%= link_to "CERRAR SESION", destroy_user_session_path, method: :delete, class:"ax" %> 
+        <br><br>
+      
+
+        <form action = "buscardisponibles" >
+          <div class="col" name="localidad">
+              <select class="dropbox" name="localidad">
+                <option value="general">general</option>
+                <option value="preferencia">preferencia</option>
+                <option value="butaca">butaca</option>
+                <option value="dead-box">dead-box</option>
+              </select>
+          </div>
+          <br> nbsp
+			 <input type="submit"/>
+        </form>
+
+
+
+      <% else %>
+      <h6 style="color: #ffffff; " >debe iniciar sesion para poder adquirir una entrada</h6>
+      <%= link_to "INICIAR SESION", new_user_session_path, class:"ax" %>
+      <%end%>
+      </li>
+
+   
+
+    
+
+  </div>
+
+
+
+  <br>
+  <br>
+  <br>
+  <div class="btn btn-outline-primary">
+        <%= link_to "Asientos", "/seats" %>
+  </div>
+  <div class="btn btn-outline-primary">
+        <%= link_to "Reservaciones", "/reservations" %>
+  </div>
+
+    <div>
+        <img src="/s2.jpg" alt="Logotipo de HTML5" class="center" width="1200" height="250" >
+    </div>
+<br>
+
+</body>
+</html>
